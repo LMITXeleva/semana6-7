@@ -1,0 +1,18 @@
+<form id="registro">
+  <input type="email" id="correo" placeholder="Correo" required><br>
+  <input type="password" id="pass" placeholder="Contraseña" required><br>
+  <button type="submit">Registrar</button>
+</form>
+
+<script>
+document.getElementById("registro").addEventListener("submit", e => {
+  e.preventDefault();
+  const correo = document.getElementById("correo").value;
+  const pass = document.getElementById("pass").value;
+  if(pass.length < 6){
+    alert("La contraseña debe tener al menos 6 caracteres");
+  } else {
+    alert(`Usuario registrado: ${correo}`);
+  }
+});
+</script>
