@@ -1,0 +1,29 @@
+<div id="app"></div>
+<script>
+const preguntas = [
+  {q: "¿Capital de México?", options: ["CDMX", "Guadalajara", "Monterrey"], correct: 0},
+  {q: "¿2+2?", options: ["3", "4", "5"], correct: 1}
+];
+
+let index = 0, score = 0;
+
+function mostrarPregunta(){
+  const p = preguntas[index];
+  document.getElementById("app").innerHTML = `
+    <h2>${p.q}</h2>
+    ${p.options.map((op,i)=>`<button onclick="responder(${i})">${op}</button>`).join("")}
+  `;
+}
+
+function responder(i){
+  if(i === preguntas[index].correct) score++;
+  index++;
+  if(index < preguntas.length){
+    mostrarPregunta();
+  } else {
+    document.getElementById("app").innerHTML = `<h2>Puntaje final: ${score}/${preguntas.length}</h2>`;
+  }
+}
+
+mostrarPregunta();
+</script>
