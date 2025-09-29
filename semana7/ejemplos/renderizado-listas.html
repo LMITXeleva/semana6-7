@@ -1,0 +1,7 @@
+<div id="app"></div>
+<script>
+let usuarios = ["Ana", "Luis", "Pedro"];
+document.getElementById("app").innerHTML = `
+  <ul>${usuarios.map(u=>`<li>${u}</li>`).join("")}</ul>
+`;
+</script>
