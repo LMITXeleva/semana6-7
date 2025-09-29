@@ -1,1 +1,9 @@
 
+<h1 id="titulo">Hola Mundo</h1>
+<button id="cambiar">Cambiar Texto</button>
+
+<script>
+document.getElementById("cambiar").addEventListener("click", () => {
+  document.getElementById("titulo").innerText = "Texto cambiado con JS ";
+});
+</script>
