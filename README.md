@@ -62,17 +62,3 @@ El objetivo es que los alumnos comprendan los conceptos de **Programación Orien
     ```
 
 ---
-
-## 🚀 Cómo ejecutar los proyectos
-
-### Ejemplos y mini proyectos de JS
-1. Abrir los archivos `.html` en el navegador.  
-2. Revisar la consola (F12 → pestaña *Console*) para ver resultados.  
-
-### Proyecto con Vite + React
-1. Clonar este repositorio.
-2. Abrir la carpeta `vite-react-demo`.
-3. Ejecutar en consola:
-   ```bash
-   npm install
-   npm run dev
