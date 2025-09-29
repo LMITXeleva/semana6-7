@@ -1,0 +1,31 @@
+<div id="app"></div>
+<script>
+function mostrarLogin(){
+  document.getElementById("app").innerHTML = `
+    <h2>Login</h2>
+    <input id="correo" placeholder="Correo"><br>
+    <input id="pass" type="password" placeholder="Contraseña"><br>
+    <button onclick="login()">Entrar</button>
+    <button onclick="registro()">Registrarse</button>
+  `;
+}
+
+function registro(){
+  const correo = prompt("Nuevo correo:");
+  const pass = prompt("Nueva contraseña:");
+  localStorage.setItem(correo, pass);
+  alert("Usuario registrado!");
+}
+
+function login(){
+  const correo = document.getElementById("correo").value;
+  const pass = document.getElementById("pass").value;
+  if(localStorage.getItem(correo) === pass){
+    document.getElementById("app").innerHTML = `<h2>Bienvenido ${correo} 🎉</h2>`;
+  } else {
+    alert("Credenciales incorrectas");
+  }
+}
+
+mostrarLogin();
+</script>
